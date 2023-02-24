@@ -40,8 +40,6 @@ enum BibleAPI{
                 endPoint +=  "?translation=kjv"
             case .web:
                 break
-            case .cherokee:
-                endPoint +=  "?translation=cherokee"
             case .clementine:
                 endPoint += "?translation=clementine"
             }
