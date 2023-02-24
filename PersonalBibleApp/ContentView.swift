@@ -11,32 +11,48 @@ import CoreData
 struct ContentView<Model>: View where Model: BibleViewModelProtocol {
     @StateObject var viewModel: Model
     @AppStorage("page") var chapter: Int = 1
-    @State var translation: BibleAPI.BibleTranslation = .kjv
+    @AppStorage("translation") var selectedTranslation: BibleTranslation = .kjv
     //Cherokee Breaks Program
-    
-    //  @State var selection: BooksInBible = .Genesis
-    @State var selection = ["Hi","test"]
+    @State var selectedBook: BooksInBible = .Genesis
     @State var verseNumber = 1
     @State var bionicReading: Bool = false
     
     
     var body: some View {
+        
+        
         VStack{
+            
+            
             HStack{
-                Button {
-                    //
-                } label: {
-                    Text(translation.rawValue).foregroundColor(.black)
-                }.buttonStyle(.bordered)
+                Picker("Select Translation", selection: $selectedTranslation) {
+                    ForEach(BibleTranslation.allCases, id: \.self){
+                        Text($0.rawValue)
+                    }
+                }.pickerStyle(.menu).colorMultiply(.black)
+                    .onChange(of: selectedTranslation) { _ in
+                        Task{
+                            await viewModel.getChapter(bookName: selectedBook, chapterNumber: chapter, bibleTrasnaltion: selectedTranslation)
+                            
+                        }
+                    }
+                
                 Spacer()
                 HStack{
-                    Button {
-                        //
-                    } label: {
-                        Text((viewModel.chapter?.chapter ?? "")).foregroundColor(.black)
-                    }.buttonStyle(.bordered)
+                    Picker("Select Translation", selection: $selectedBook) {
+                        ForEach(BooksInBible.allCases, id: \.self){
+                            Text($0.rawValue)
+                        }
+                    }.pickerStyle(.menu).colorMultiply(.black)
+                        .onChange(of: selectedBook) { _ in
+                            chapter = 1
+                            Task{
+                                await viewModel.getChapter(bookName: selectedBook, chapterNumber: chapter, bibleTrasnaltion: selectedTranslation)
+                                
+                            }
+                        }
                     
-                    Text(": " + String(verseNumber))
+                    Text("\(chapter): " + String(verseNumber))
                     
                 }
             } .frame(maxWidth: .infinity,alignment: .trailing).padding([.trailing,.leading],30)
@@ -45,8 +61,7 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
                 
                 if viewModel.chapter != nil{
                     ForEach((viewModel.chapter?.verses)!, id: \.self) { verse in
-                        
-                        
+                    
                         
                         if bionicReading{
                             let wordsInVerse = verse.text?.components(separatedBy: " ")
@@ -68,7 +83,9 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
                             }
                         }
                         
-                    }.padding([.trailing,.leading])
+                    }
+                    .padding([.trailing,.leading])
+                    
                     
                 }
             }.padding(.top)
@@ -79,7 +96,7 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
                     chapter -= 1
                     
                     Task{
-                        await viewModel.getChapter(bookName: "JHN", chapterNumber: chapter, bibleTrasnaltion: translation)
+                        await viewModel.getChapter(bookName: selectedBook, chapterNumber: chapter, bibleTrasnaltion: selectedTranslation)
                     }
                 } label: {
                     Image(systemName: "arrowshape.left.fill")
@@ -102,7 +119,7 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
                     chapter += 1
                     
                     Task{
-                        await viewModel.getChapter(bookName: "JHN", chapterNumber: chapter, bibleTrasnaltion: translation)
+                        await viewModel.getChapter(bookName: selectedBook, chapterNumber: chapter, bibleTrasnaltion: selectedTranslation)
                     }
                 } label: {
                     Image(systemName: "arrowshape.right.fill")
@@ -115,7 +132,7 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
             }.padding([.leading,.trailing], 50)
             
         }.task {
-            await viewModel.getChapter(bookName: "JHN", chapterNumber: chapter, bibleTrasnaltion: translation)
+            await viewModel.getChapter(bookName: selectedBook, chapterNumber: chapter, bibleTrasnaltion: selectedTranslation)
         }
     }
     //

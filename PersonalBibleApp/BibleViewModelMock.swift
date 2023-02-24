@@ -15,7 +15,7 @@ class BibleViewModelMock: BibleViewModelProtocol{
     
     
     
-    func getChapter(bookName: String, chapterNumber: Int, bibleTrasnaltion: BibleAPI.BibleTranslation) async{
+    func getChapter(bookName: BooksInBible, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async{
         let randomWords = ["The", "Sky", "Blue", "Cow", "Fake", "lafajkfjdkla","Dummy", "afdafaf","afkdakjfakl","niuafa","end\n"]
 
         

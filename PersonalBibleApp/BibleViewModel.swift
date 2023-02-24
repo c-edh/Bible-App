@@ -11,7 +11,7 @@ protocol BibleViewModelProtocol: ObservableObject{
     nonisolated var chapter: ChapterModel? { get set}
     
     
-    func getChapter(bookName: String, chapterNumber: Int, bibleTrasnaltion: BibleAPI.BibleTranslation) async
+    func getChapter(bookName: BooksInBible, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async
 
 }
 
@@ -23,7 +23,7 @@ class BibleViewModel: BibleViewModelProtocol{
     
     private let networkManager = NetworkManager()
     
-    func getChapter(bookName: String, chapterNumber: Int, bibleTrasnaltion: BibleAPI.BibleTranslation) async{
+    func getChapter(bookName: BooksInBible, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async{
         do {
             chapter = try await networkManager.getData(api: .getWholeChapter(bookName: bookName, chapterNumber: chapterNumber, translation: bibleTrasnaltion))
         } catch  {

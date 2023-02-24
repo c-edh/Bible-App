@@ -27,14 +27,14 @@ struct NetworkManager{
 enum BibleAPI{
     private var baseURL: String { return "https://bible-api.com/" }
     
-    case getWholeChapter(bookName: String, chapterNumber: Int, translation: BibleTranslation)
+    case getWholeChapter(bookName: BooksInBible, chapterNumber: Int, translation: BibleTranslation)
     
     
     private var fullPath: String{
         var endPoint = ""
         switch self {
         case .getWholeChapter(let bookName, let chapterNumber, let translation):
-            endPoint = bookName + "%20\(chapterNumber)"
+            endPoint = bookName.rawValue + "%20\(chapterNumber)"
             switch translation{
             case .kjv:
                 endPoint +=  "?translation=kjv"
@@ -55,26 +55,7 @@ enum BibleAPI{
                }
         return url
     }
-    
-    enum BibleTranslation: String, CaseIterable{
-        case kjv = "KJV"
-        case web = "Web"
-        case cherokee = "Cherokee"
-        case clementine = "Clementine"
-        
-        var fullNameOfTranslation: String {
-            switch self{
-            case .kjv:
-                return "King James Verison"
-            case .web:
-                return "World English Bible"
-            case .cherokee:
-                return "Cherokee New Testament"
-            case .clementine:
-                return "Clementine Latin Vulgate"
-            }
-        }
-    }
+
     
     
     

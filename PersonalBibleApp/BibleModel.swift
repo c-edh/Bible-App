@@ -28,7 +28,7 @@ struct VerseModel: Decodable, Hashable{
 
 
 
-enum BooksInBible: CaseIterable{
+enum BooksInBible: String, CaseIterable{
     
     case Genesis
     case Exodus
@@ -101,3 +101,22 @@ enum BooksInBible: CaseIterable{
 }
 
 
+enum BibleTranslation: String, CaseIterable, Equatable{
+    case kjv = "KJV"
+    case web = "Web"
+    case cherokee = "Cherokee"
+    case clementine = "Clementine"
+    
+    var fullNameOfTranslation: String {
+        switch self{
+        case .kjv:
+            return "King James Verison"
+        case .web:
+            return "World English Bible"
+        case .cherokee:
+            return "Cherokee New Testament"
+        case .clementine:
+            return "Clementine Latin Vulgate"
+        }
+    }
+}
