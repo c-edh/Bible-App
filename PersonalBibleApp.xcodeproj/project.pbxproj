@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F4547A5929A8300000BF5693 /* BibleViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4547A5829A8300000BF5693 /* BibleViewModelMock.swift */; };
+		F4BF939029A66AF200CEBDE7 /* PersonalBibleAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF938F29A66AF200CEBDE7 /* PersonalBibleAppApp.swift */; };
+		F4BF939229A66AF200CEBDE7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF939129A66AF200CEBDE7 /* ContentView.swift */; };
+		F4BF939429A66AF400CEBDE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BF939329A66AF400CEBDE7 /* Assets.xcassets */; };
+		F4BF939729A66AF400CEBDE7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4BF939629A66AF400CEBDE7 /* Preview Assets.xcassets */; };
+		F4BF939929A66AF400CEBDE7 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF939829A66AF400CEBDE7 /* Persistence.swift */; };
+		F4BF939C29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F4BF939A29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodeld */; };
+		F4BF93A629A66AF500CEBDE7 /* PersonalBibleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF93A529A66AF500CEBDE7 /* PersonalBibleAppTests.swift */; };
+		F4BF93B029A66AF500CEBDE7 /* PersonalBibleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF93AF29A66AF500CEBDE7 /* PersonalBibleAppUITests.swift */; };
+		F4BF93B229A66AF500CEBDE7 /* PersonalBibleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF93B129A66AF500CEBDE7 /* PersonalBibleAppUITestsLaunchTests.swift */; };
+		F4BF93BF29A66C3B00CEBDE7 /* BibleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF93BE29A66C3B00CEBDE7 /* BibleModel.swift */; };
+		F4BF93C129A66DC800CEBDE7 /* BibleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF93C029A66DC800CEBDE7 /* BibleViewModel.swift */; };
+		F4BF93C329A66E4100CEBDE7 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4BF93C229A66E4100CEBDE7 /* NetworkManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F4BF93A229A66AF500CEBDE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4BF938429A66AF200CEBDE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4BF938B29A66AF200CEBDE7;
+			remoteInfo = PersonalBibleApp;
+		};
+		F4BF93AC29A66AF500CEBDE7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F4BF938429A66AF200CEBDE7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4BF938B29A66AF200CEBDE7;
+			remoteInfo = PersonalBibleApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F4547A5829A8300000BF5693 /* BibleViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewModelMock.swift; sourceTree = "<group>"; };
+		F4BF938C29A66AF200CEBDE7 /* PersonalBibleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersonalBibleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4BF938F29A66AF200CEBDE7 /* PersonalBibleAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBibleAppApp.swift; sourceTree = "<group>"; };
+		F4BF939129A66AF200CEBDE7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F4BF939329A66AF400CEBDE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4BF939629A66AF400CEBDE7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F4BF939829A66AF400CEBDE7 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		F4BF939B29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PersonalBibleApp.xcdatamodel; sourceTree = "<group>"; };
+		F4BF93A129A66AF500CEBDE7 /* PersonalBibleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalBibleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4BF93A529A66AF500CEBDE7 /* PersonalBibleAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBibleAppTests.swift; sourceTree = "<group>"; };
+		F4BF93AB29A66AF500CEBDE7 /* PersonalBibleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonalBibleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4BF93AF29A66AF500CEBDE7 /* PersonalBibleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBibleAppUITests.swift; sourceTree = "<group>"; };
+		F4BF93B129A66AF500CEBDE7 /* PersonalBibleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalBibleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F4BF93BE29A66C3B00CEBDE7 /* BibleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleModel.swift; sourceTree = "<group>"; };
+		F4BF93C029A66DC800CEBDE7 /* BibleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibleViewModel.swift; sourceTree = "<group>"; };
+		F4BF93C229A66E4100CEBDE7 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F4BF938929A66AF200CEBDE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4BF939E29A66AF500CEBDE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4BF93A829A66AF500CEBDE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F4BF938329A66AF200CEBDE7 = {
+			isa = PBXGroup;
+			children = (
+				F4BF938E29A66AF200CEBDE7 /* PersonalBibleApp */,
+				F4BF93A429A66AF500CEBDE7 /* PersonalBibleAppTests */,
+				F4BF93AE29A66AF500CEBDE7 /* PersonalBibleAppUITests */,
+				F4BF938D29A66AF200CEBDE7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F4BF938D29A66AF200CEBDE7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F4BF938C29A66AF200CEBDE7 /* PersonalBibleApp.app */,
+				F4BF93A129A66AF500CEBDE7 /* PersonalBibleAppTests.xctest */,
+				F4BF93AB29A66AF500CEBDE7 /* PersonalBibleAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F4BF938E29A66AF200CEBDE7 /* PersonalBibleApp */ = {
+			isa = PBXGroup;
+			children = (
+				F4BF938F29A66AF200CEBDE7 /* PersonalBibleAppApp.swift */,
+				F4BF93BE29A66C3B00CEBDE7 /* BibleModel.swift */,
+				F4BF93C029A66DC800CEBDE7 /* BibleViewModel.swift */,
+				F4547A5829A8300000BF5693 /* BibleViewModelMock.swift */,
+				F4BF93C229A66E4100CEBDE7 /* NetworkManager.swift */,
+				F4BF939129A66AF200CEBDE7 /* ContentView.swift */,
+				F4BF939329A66AF400CEBDE7 /* Assets.xcassets */,
+				F4BF939829A66AF400CEBDE7 /* Persistence.swift */,
+				F4BF939A29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodeld */,
+				F4BF939529A66AF400CEBDE7 /* Preview Content */,
+			);
+			path = PersonalBibleApp;
+			sourceTree = "<group>";
+		};
+		F4BF939529A66AF400CEBDE7 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F4BF939629A66AF400CEBDE7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F4BF93A429A66AF500CEBDE7 /* PersonalBibleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F4BF93A529A66AF500CEBDE7 /* PersonalBibleAppTests.swift */,
+			);
+			path = PersonalBibleAppTests;
+			sourceTree = "<group>";
+		};
+		F4BF93AE29A66AF500CEBDE7 /* PersonalBibleAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F4BF93AF29A66AF500CEBDE7 /* PersonalBibleAppUITests.swift */,
+				F4BF93B129A66AF500CEBDE7 /* PersonalBibleAppUITestsLaunchTests.swift */,
+			);
+			path = PersonalBibleAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F4BF938B29A66AF200CEBDE7 /* PersonalBibleApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4BF93B529A66AF500CEBDE7 /* Build configuration list for PBXNativeTarget "PersonalBibleApp" */;
+			buildPhases = (
+				F4BF938829A66AF200CEBDE7 /* Sources */,
+				F4BF938929A66AF200CEBDE7 /* Frameworks */,
+				F4BF938A29A66AF200CEBDE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PersonalBibleApp;
+			productName = PersonalBibleApp;
+			productReference = F4BF938C29A66AF200CEBDE7 /* PersonalBibleApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F4BF93A029A66AF500CEBDE7 /* PersonalBibleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4BF93B829A66AF500CEBDE7 /* Build configuration list for PBXNativeTarget "PersonalBibleAppTests" */;
+			buildPhases = (
+				F4BF939D29A66AF500CEBDE7 /* Sources */,
+				F4BF939E29A66AF500CEBDE7 /* Frameworks */,
+				F4BF939F29A66AF500CEBDE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4BF93A329A66AF500CEBDE7 /* PBXTargetDependency */,
+			);
+			name = PersonalBibleAppTests;
+			productName = PersonalBibleAppTests;
+			productReference = F4BF93A129A66AF500CEBDE7 /* PersonalBibleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4BF93AA29A66AF500CEBDE7 /* PersonalBibleAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4BF93BB29A66AF500CEBDE7 /* Build configuration list for PBXNativeTarget "PersonalBibleAppUITests" */;
+			buildPhases = (
+				F4BF93A729A66AF500CEBDE7 /* Sources */,
+				F4BF93A829A66AF500CEBDE7 /* Frameworks */,
+				F4BF93A929A66AF500CEBDE7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4BF93AD29A66AF500CEBDE7 /* PBXTargetDependency */,
+			);
+			name = PersonalBibleAppUITests;
+			productName = PersonalBibleAppUITests;
+			productReference = F4BF93AB29A66AF500CEBDE7 /* PersonalBibleAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F4BF938429A66AF200CEBDE7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					F4BF938B29A66AF200CEBDE7 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					F4BF93A029A66AF500CEBDE7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F4BF938B29A66AF200CEBDE7;
+					};
+					F4BF93AA29A66AF500CEBDE7 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = F4BF938B29A66AF200CEBDE7;
+					};
+				};
+			};
+			buildConfigurationList = F4BF938729A66AF200CEBDE7 /* Build configuration list for PBXProject "PersonalBibleApp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F4BF938329A66AF200CEBDE7;
+			productRefGroup = F4BF938D29A66AF200CEBDE7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F4BF938B29A66AF200CEBDE7 /* PersonalBibleApp */,
+				F4BF93A029A66AF500CEBDE7 /* PersonalBibleAppTests */,
+				F4BF93AA29A66AF500CEBDE7 /* PersonalBibleAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F4BF938A29A66AF200CEBDE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4BF939729A66AF400CEBDE7 /* Preview Assets.xcassets in Resources */,
+				F4BF939429A66AF400CEBDE7 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4BF939F29A66AF500CEBDE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4BF93A929A66AF500CEBDE7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F4BF938829A66AF200CEBDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4BF939C29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodeld in Sources */,
+				F4BF939929A66AF400CEBDE7 /* Persistence.swift in Sources */,
+				F4BF93BF29A66C3B00CEBDE7 /* BibleModel.swift in Sources */,
+				F4BF93C329A66E4100CEBDE7 /* NetworkManager.swift in Sources */,
+				F4BF939229A66AF200CEBDE7 /* ContentView.swift in Sources */,
+				F4BF939029A66AF200CEBDE7 /* PersonalBibleAppApp.swift in Sources */,
+				F4BF93C129A66DC800CEBDE7 /* BibleViewModel.swift in Sources */,
+				F4547A5929A8300000BF5693 /* BibleViewModelMock.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4BF939D29A66AF500CEBDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4BF93A629A66AF500CEBDE7 /* PersonalBibleAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4BF93A729A66AF500CEBDE7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4BF93B029A66AF500CEBDE7 /* PersonalBibleAppUITests.swift in Sources */,
+				F4BF93B229A66AF500CEBDE7 /* PersonalBibleAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F4BF93A329A66AF500CEBDE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4BF938B29A66AF200CEBDE7 /* PersonalBibleApp */;
+			targetProxy = F4BF93A229A66AF500CEBDE7 /* PBXContainerItemProxy */;
+		};
+		F4BF93AD29A66AF500CEBDE7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4BF938B29A66AF200CEBDE7 /* PersonalBibleApp */;
+			targetProxy = F4BF93AC29A66AF500CEBDE7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F4BF93B329A66AF500CEBDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F4BF93B429A66AF500CEBDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F4BF93B629A66AF500CEBDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PersonalBibleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8CD56KSUZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = coreye.PersonalBibleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4BF93B729A66AF500CEBDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PersonalBibleApp/Preview Content\"";
+				DEVELOPMENT_TEAM = 8CD56KSUZ7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = coreye.PersonalBibleApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F4BF93B929A66AF500CEBDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CD56KSUZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = coreye.PersonalBibleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalBibleApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PersonalBibleApp";
+			};
+			name = Debug;
+		};
+		F4BF93BA29A66AF500CEBDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CD56KSUZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = coreye.PersonalBibleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PersonalBibleApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/PersonalBibleApp";
+			};
+			name = Release;
+		};
+		F4BF93BC29A66AF500CEBDE7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CD56KSUZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = coreye.PersonalBibleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PersonalBibleApp;
+			};
+			name = Debug;
+		};
+		F4BF93BD29A66AF500CEBDE7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8CD56KSUZ7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = coreye.PersonalBibleAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PersonalBibleApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F4BF938729A66AF200CEBDE7 /* Build configuration list for PBXProject "PersonalBibleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4BF93B329A66AF500CEBDE7 /* Debug */,
+				F4BF93B429A66AF500CEBDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4BF93B529A66AF500CEBDE7 /* Build configuration list for PBXNativeTarget "PersonalBibleApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4BF93B629A66AF500CEBDE7 /* Debug */,
+				F4BF93B729A66AF500CEBDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4BF93B829A66AF500CEBDE7 /* Build configuration list for PBXNativeTarget "PersonalBibleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4BF93B929A66AF500CEBDE7 /* Debug */,
+				F4BF93BA29A66AF500CEBDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4BF93BB29A66AF500CEBDE7 /* Build configuration list for PBXNativeTarget "PersonalBibleAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4BF93BC29A66AF500CEBDE7 /* Debug */,
+				F4BF93BD29A66AF500CEBDE7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F4BF939A29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F4BF939B29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodel */,
+			);
+			currentVersion = F4BF939B29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodel */;
+			path = PersonalBibleApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = F4BF938429A66AF200CEBDE7 /* Project object */;
+}
