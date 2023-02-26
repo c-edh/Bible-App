@@ -17,7 +17,6 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
     
     @State private var bionicReading: Bool = false
     
-    
     var body: some View {
         //MARK: - Top
         VStack{
