@@ -9,6 +9,10 @@ import Foundation
 
 
 class BibleViewModelMock: BibleViewModelProtocol{
+    func getVerse() -> [VerseModel] {
+        return [VerseModel(book_id: nil, book_name: nil, chapter: nil, verse: nil, text: nil)]
+    }
+    
 
     @Published var chapter: ChapterModel? = nil
 

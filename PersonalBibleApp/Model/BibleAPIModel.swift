@@ -34,12 +34,15 @@ enum BibleAPIModel{
             }
             
             switch translation{
-            case .web: //Default
-                break
+
             case .kjv:
                 endPoint +=  "?translation=kjv"
             case .clementine:
                 endPoint += "?translation=clementine"
+            case .cherokee:
+                endPoint += "?translation=cherokee"
+            default: //Web is Default
+                break
             }
         }
         return baseURL + endPoint

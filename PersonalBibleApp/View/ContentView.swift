@@ -94,7 +94,10 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
         }
     }
 
-    private func splitString(_ word: String) -> (Substring, Substring){
+    private func splitString(_ word: String) -> (Substring, Substring)?{
+        if word.isEmpty{
+            return nil
+        }
         let halfLength = word.count / 2 + 1
         let firstHalf = word[0..<halfLength]
         let secondHalf = word[halfLength..<word.count]
@@ -103,7 +106,7 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
     
     private func BionicText(_ words: [String]?) -> Text{
         words?.reduce(Text("").font(.system(size:20)).fontWeight(.heavy),{
-            let (firstHalf, secondHalf) = splitString($1)
+            let (firstHalf, secondHalf) = splitString($1) ?? ("","")
             
             return $0 + Text(String(firstHalf)).font(.system(size: 20,weight: .semibold)) + Text(String(secondHalf) + "   ").font(.system(size:20, weight: .light))
         }) ?? Text("Error, Problem getting Text")
