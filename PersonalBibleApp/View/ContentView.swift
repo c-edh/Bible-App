@@ -35,7 +35,7 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
                             HStack{
                                 Text(String(verse.verse ?? 0))
                                     .frame(maxHeight: .infinity, alignment: .top)
-                                Text((verse.text ?? "Error couldnt get text"))
+                                Text((verse.text ?? "Error, No Text Available"))
                             }
                         }
                     }
@@ -127,7 +127,6 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
     }
 }
 
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView(viewModel: BibleViewModelMock())
@@ -135,12 +134,11 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-
-
 struct SelectorsView: View {
     @Binding var selectedTranslation: BibleTranslation
     @Binding var selectedBook: Int
     @Binding var chapter: Int
+    
     private let books = BibleBooks.books
     
     let updateInfo: () -> ()
@@ -168,6 +166,7 @@ struct SelectorsView: View {
                     }
                 }.pickerStyle(.menu).colorMultiply(.black).frame(maxWidth: .infinity)
                     .onChange(of: selectedBook) { _ in
+                        chapter = 1
                         updateInfo()
                     }
                 

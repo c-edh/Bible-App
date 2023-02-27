@@ -11,7 +11,7 @@ enum BibleTranslation: String, CaseIterable, Equatable{
     case kjv = "KJV"
     case web = "Web"
     case clementine = "Clementine"
-    case cherokee = "Cherokee"
+    case cherokee = "Cherokee New Testatment"
     
     var fullNameOfTranslation: String {
         switch self{
