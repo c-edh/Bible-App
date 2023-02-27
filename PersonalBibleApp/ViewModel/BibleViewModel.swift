@@ -9,7 +9,7 @@ import Foundation
 
 protocol BibleViewModelProtocol: ObservableObject{
     nonisolated var chapter: ChapterModel? { get set}
-    func getChapterData(bookName: BooksInBible, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async
+    func getChapterData(bookName: BookModel, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async
     
     nonisolated func getVerse() -> [VerseModel]
 }
@@ -22,14 +22,10 @@ class BibleViewModel: BibleViewModelProtocol{
     private let networkManager = NetworkManager()
     
     func getVerse() -> [VerseModel]{
-        
-        guard let verses =  chapter?.verses else{
-            return [VerseModel(book_id: nil, book_name: nil, chapter: nil, verse: nil, text: nil)]
-        }
-        return verses
+        return chapter?.verses ?? [VerseModel(book_id: nil, book_name: nil, chapter: nil, verse: nil, text: nil)]
     }
     
-    func getChapterData(bookName: BooksInBible, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async{
+    func getChapterData(bookName: BookModel, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async{
         do {
             let newChapter = try await networkManager.getData(api: .getWholeChapter(book: bookName, chapterNumber: chapterNumber, translation: bibleTrasnaltion))
             chapter = newChapter

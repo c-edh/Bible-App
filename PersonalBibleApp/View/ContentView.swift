@@ -11,7 +11,7 @@ import CoreData
 struct ContentView<Model>: View where Model: BibleViewModelProtocol {
     @StateObject var viewModel: Model
     
-    @AppStorage("book") var selectedBook: BooksInBible = .Genesis
+    @AppStorage("book") var selectedBook: Int = 0
     @AppStorage("page") var chapter: Int = 1
     @AppStorage("translation") var selectedTranslation: BibleTranslation = .kjv
     
@@ -52,8 +52,11 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
                 Button {
                     chapter -= 1
                     if chapter < 1{
-                        selectedBook = selectedBook.previous()
-                        chapter = selectedBook.info.amountOfChapters
+                        selectedBook -= 1
+                        if selectedBook<0{
+                            selectedBook = 65
+                        }
+                        chapter = BibleBooks.books[selectedBook].amountOfChapters
                     }
                     updateInfo()
                 } label: {
@@ -76,8 +79,11 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
                
                 Button {
                     chapter += 1
-                    if chapter > selectedBook.info.amountOfChapters{
-                        selectedBook = selectedBook.next()
+                    if chapter > BibleBooks.books[selectedBook].amountOfChapters{
+                        selectedBook+=1
+                        if selectedBook==BibleBooks.books.count{
+                            selectedBook = 0
+                        }
                         chapter = 1
                     }
                     updateInfo()
@@ -114,7 +120,7 @@ struct ContentView<Model>: View where Model: BibleViewModelProtocol {
     
     private func updateInfo(){
             Task{
-                await viewModel.getChapterData(bookName: selectedBook,
+                await viewModel.getChapterData(bookName: BibleBooks.books[selectedBook],
                                            chapterNumber: chapter,
                                            bibleTrasnaltion: selectedTranslation)
             }
@@ -133,8 +139,9 @@ struct ContentView_Previews: PreviewProvider {
 
 struct SelectorsView: View {
     @Binding var selectedTranslation: BibleTranslation
-    @Binding var selectedBook: BooksInBible
+    @Binding var selectedBook: Int
     @Binding var chapter: Int
+    private let books = BibleBooks.books
     
     let updateInfo: () -> ()
     
@@ -155,17 +162,17 @@ struct SelectorsView: View {
             HStack(spacing:0){
                
                 Picker("Select Book", selection: $selectedBook) {
-                    ForEach(BooksInBible.allCases, id: \.self){
-                        Text($0.rawValue)
+                    ForEach(0..<books.count, id: \.self){
+                        
+                        Text(books[$0].bookName)
                     }
                 }.pickerStyle(.menu).colorMultiply(.black).frame(maxWidth: .infinity)
                     .onChange(of: selectedBook) { _ in
-                        chapter = 1
                         updateInfo()
                     }
                 
                 Picker("Select Chapter", selection: $chapter) {
-                    ForEach(1...selectedBook.info.amountOfChapters, id: \.self){
+                    ForEach(1...books[selectedBook].amountOfChapters, id: \.self){
                         Text(String($0))
                     }
                 }.pickerStyle(.menu)

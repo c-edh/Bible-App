@@ -10,7 +10,7 @@ import Foundation
 enum BibleAPIModel{
     private var baseURL: String { return "https://bible-api.com/" }
     
-    case getWholeChapter(book: BooksInBible, chapterNumber: Int, translation: BibleTranslation)
+    case getWholeChapter(book: BookModel, chapterNumber: Int, translation: BibleTranslation)
     
     private var fullPath: String{
         var endPoint = ""
@@ -18,19 +18,19 @@ enum BibleAPIModel{
         case .getWholeChapter(let book, let chapterNumber, let translation):
             
             //API wont return more than one verse for books with one chapter, you need to give it the range for the verses.
-            switch book{
-            case .Obadiah:
-                endPoint = book.info.id + "%201:1-22"
-            case .Philemon:
-                endPoint = book.info.id + "%201:1-25"
-            case .John2:
-                endPoint = book.info.id + "%201:1-13"
-            case .John3:
-                endPoint = book.info.id + "%201:1-14"
-            case .Jude:
-                endPoint = book.info.id + "%201:1-24"
+            switch book.bookID{
+            case "Obadiah":
+                endPoint = book.bookID + "%201:1-22"
+            case "Philemon":
+                endPoint = book.bookID + "%201:1-25"
+            case "2JN":
+                endPoint = book.bookID + "%201:1-13"
+            case "3JN":
+                endPoint = book.bookID + "%201:1-14"
+            case "JUD":
+                endPoint = book.bookID + "%201:1-24"
             default:
-                endPoint = book.info.id + "%20\(chapterNumber)"
+                endPoint = book.bookID + "%20\(chapterNumber)"
             }
             
             switch translation{

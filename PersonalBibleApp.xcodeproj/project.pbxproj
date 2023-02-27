@@ -149,10 +149,10 @@
 			children = (
 				F4BF938F29A66AF200CEBDE7 /* PersonalBibleAppApp.swift */,
 				F4BF93C229A66E4100CEBDE7 /* NetworkManager.swift */,
-				F49DC11E29A985A000A71A3C /* Model */,
 				F49DC11C29A9857800A71A3C /* Extension */,
-				F49DC11D29A9858E00A71A3C /* ViewModel */,
+				F49DC11E29A985A000A71A3C /* Model */,
 				F49DC11F29A985B100A71A3C /* View */,
+				F49DC11D29A9858E00A71A3C /* ViewModel */,
 				F4BF939329A66AF400CEBDE7 /* Assets.xcassets */,
 				F4BF939829A66AF400CEBDE7 /* Persistence.swift */,
 				F4BF939A29A66AF400CEBDE7 /* PersonalBibleApp.xcdatamodeld */,

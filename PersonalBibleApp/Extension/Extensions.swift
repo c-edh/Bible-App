@@ -12,7 +12,6 @@ import Foundation
 //MARK: - Used to split the string
 
 extension StringProtocol {
-    
     subscript(bounds: CountableRange<Int>) -> SubSequence {
         let start = index(startIndex, offsetBy: bounds.lowerBound)
         let end = index(start, offsetBy: bounds.count)

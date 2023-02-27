@@ -9,14 +9,14 @@ import Foundation
 
 
 class BibleViewModelMock: BibleViewModelProtocol{
-    func getVerse() -> [VerseModel] {
-        return [VerseModel(book_id: nil, book_name: nil, chapter: nil, verse: nil, text: nil)]
+    func getVerse() -> [VerseModel] {        
+        return chapter?.verses ?? [VerseModel(book_id: nil, book_name: nil, chapter: nil, verse: nil, text: nil)]
     }
     
 
     @Published var chapter: ChapterModel? = nil
 
-    func getChapterData(bookName: BooksInBible, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async{
+    func getChapterData(bookName: BookModel, chapterNumber: Int, bibleTrasnaltion: BibleTranslation) async{
         let randomWords = ["The", "Sky", "Blue", "Cow", "Fake", "lafajkfjdkla","Dummy", "afdafaf","afkdakjfakl","niuafa","end\n"]
 
         var verses: [VerseModel] = []
