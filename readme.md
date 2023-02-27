@@ -34,6 +34,7 @@ Saves Current Page and Book the User is Reading
 
 ## Demo
 
+![BibleAPPDemo](https://user-images.githubusercontent.com/53097839/221461437-8aec301b-add1-4cd0-8491-f3ab8a07b987.gif)
 
 
 
